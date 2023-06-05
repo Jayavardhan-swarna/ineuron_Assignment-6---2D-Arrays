@@ -1,0 +1,22 @@
+def findOriginalArray(changed):
+    if len(changed) % 2 != 0:
+        return []
+
+    changed.sort()
+    original = []
+
+    for num in changed:
+        if num * 2 in original:
+            original.remove(num * 2)
+        else:
+            original.append(num)
+
+    if len(original) == 0:
+        return original
+
+    return []
+
+# Example usage
+changed = [1, 3, 4, 2, 6, 8]
+result = findOriginalArray(changed)
+print(result) 
