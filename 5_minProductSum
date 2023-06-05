@@ -1,0 +1,13 @@
+def minProductSum(nums1, nums2):
+    nums1.sort()
+    nums2.sort(reverse=True)
+
+    product_sum = sum(nums1[i] * nums2[i] for i in range(len(nums1)))
+
+    return product_sum
+
+# Example usage
+nums1 = [5, 3, 4, 2]
+nums2 = [4, 2, 2, 5]
+result = minProductSum(nums1, nums2)
+print(result) 
